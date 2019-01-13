@@ -1,7 +1,13 @@
 /* --------------------------------------------------------------------------------------------
  * Copyright (c) Microsoft Corporation. All rights reserved.
  * Licensed under the MIT License. See License.txt in the project root for license information.
- * ------------------------------------------------------------------------------------------ */
+ * ------------------------------------------------------------------------------------------
+ * From : https://code.visualstudio.com/api/language-extensions/language-server-extension-guide#explaining-the-language-server
+ * Server implementation that uses the provided simple text document manager which synchronizes 
+ * text documents by always sending the file's full content from VS Code to the server 
+ * */
+// This file contains the list of all completion items
+import labels from "./labels";
 
 import {
 	createConnection,
@@ -38,8 +44,8 @@ connection.onInitialize((params: InitializeParams) => {
 	hasWorkspaceFolderCapability = !!(capabilities.workspace && !!capabilities.workspace.workspaceFolders);
 	hasDiagnosticRelatedInformationCapability =
 		!!(capabilities.textDocument &&
-		capabilities.textDocument.publishDiagnostics &&
-		capabilities.textDocument.publishDiagnostics.relatedInformation);
+			capabilities.textDocument.publishDiagnostics &&
+			capabilities.textDocument.publishDiagnostics.relatedInformation);
 
 	return {
 		capabilities: {
@@ -179,18 +185,7 @@ connection.onCompletion(
 		// The pass parameter contains the position of the text document in
 		// which code complete got requested. For the example we ignore this
 		// info and always provide the same completion items.
-		return [
-			{
-				label: 'TypeScript',
-				kind: CompletionItemKind.Text,
-				data: 1
-			},
-			{
-				label: 'JavaScript',
-				kind: CompletionItemKind.Text,
-				data: 2
-			}
-		];
+		return labels;
 	}
 );
 
@@ -198,12 +193,39 @@ connection.onCompletion(
 // the completion list.
 connection.onCompletionResolve(
 	(item: CompletionItem): CompletionItem => {
-		if (item.data === 1) {
-			(item.detail = 'TypeScript details'),
-				(item.documentation = 'TypeScript documentation');
-		} else if (item.data === 2) {
-			(item.detail = 'JavaScript details'),
-				(item.documentation = 'JavaScript documentation');
+		switch (item.data) {
+			case 1:
+				(item.detail = 'new (BABYLON.Engine)(canvasOrContext, antialias, options, adaptToDeviceRatio)'),
+					(item.documentation = 'Creates a new engine')
+				break;
+			case 2:
+				(item.detail = 'new (BABYLON.Scene)(engine, options)'),
+					(item.documentation = 'Creates a new Scene')
+				break;
+			case 3:
+				(item.detail = 'new (BABYLON.FreeCamera)(name, position, scene, setActiveOnSceneIfNoneActive)'),
+					(item.documentation = 'Instantiates a Free Camera. This represents a free type of camera. It can be useful in First Person Shooter game for instance. Please consider using the new UniversalCamera instead as it adds more functionality like touch to this camera.')
+				break;
+			case 4:
+				(item.detail = 'new (BABYLON.Vector3)(x,y,z)'),
+					(item.documentation = 'Creates a new Vector3 object from the given x, y, z (floats) coordinates.')
+				break;
+			case 5:
+				(item.detail = 'new (BABYLON.HemisphericLight)(name, direction, scene)'),
+					(item.documentation = 'Creates a HemisphericLight object in the scene according to the passed direction (Vector3). The HemisphericLight simulates the ambient environment light, so the passed direction is the light reflection direction, not the incoming direction. The HemisphericLight can\'t cast shadows. Documentation : https://doc.babylonjs.com/babylon101/lights')
+				break;
+			case 6:
+				(item.detail = 'new (BABYLON.object)'),
+					(item.documentation = 'Creates a object')
+				break;
+			case 7:
+				(item.detail = 'new ('),
+					(item.documentation = 'Instanciates a BABYLON')
+				break;
+			default:
+				(item.detail = 'Babylon'),
+					(item.documentation = 'Documentation not provided')
+				break;
 		}
 		return item;
 	}
