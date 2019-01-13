@@ -1,7 +1,9 @@
 /* --------------------------------------------------------------------------------------------
  * Copyright (c) Microsoft Corporation. All rights reserved.
  * Licensed under the MIT License. See License.txt in the project root for license information.
- * ------------------------------------------------------------------------------------------ */
+ * ------------------------------------------------------------------------------------------
+ * From : https://code.visualstudio.com/api/language-extensions/language-server-extension-guide#lsp-sample-a-simple-language-server-for-plain-text-files
+ * This file is the entry of the lsp-sample extension */
 
 import * as path from 'path';
 import { workspace, ExtensionContext } from 'vscode';
@@ -37,8 +39,11 @@ export function activate(context: ExtensionContext) {
 
 	// Options to control the language client
 	let clientOptions: LanguageClientOptions = {
-		// Register the server for plain text documents
-		documentSelector: [{ scheme: 'file', language: 'plaintext' }],
+		// Register the server for coffeescript documents
+		/*
+		We change the language to coffeescript because our extension is for coffeescript scripts
+		*/ 
+		documentSelector: [{ scheme: 'file', language: 'coffeescript' }],
 		synchronize: {
 			// Notify the server about file changes to '.clientrc files contained in the workspace
 			fileEvents: workspace.createFileSystemWatcher('**/.clientrc')
