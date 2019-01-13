@@ -2,6 +2,12 @@
 
 This project aims to create an autocomplete extension for Babylon.js thanks to the [Language Server Extension](https://code.visualstudio.com/api/language-extensions/language-server-extension-guide) provided by VSCode. 
 
+To understand what is Language Server and why we use it in this project please refer to this link : https://code.visualstudio.com/api/language-extensions/language-server-extension-guide#why-language-server
+
+# LSP Sample 
+ 
+This is the folder that contains the code of the extension. 
+
 # Babylon Sample
 
 ### Instructions to compile the [example from Babylon.js](https://playground.babylonjs.com/) written in coffeescript and see the output
