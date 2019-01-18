@@ -1,9 +1,0 @@
-{
-    "scripts": {
-        "compile": "coffee --output ./out ./src && cp ./src/index.html ./out/"
-    },
-    "dependencies": {},
-    "devDependencies": {
-        "coffeescript": "^2.3.2"
-    }
-}

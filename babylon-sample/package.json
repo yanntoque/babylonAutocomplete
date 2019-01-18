@@ -1,6 +1,8 @@
-{
+{   
+    "name": "babyloneAutocomplete",
+    "version": "0.0.0",
     "scripts": {
-        "compile": "coffee --output ./out ./src && cp ./src/index.html ./out/"
+        "compile": "coffee --watch --output ./out ./src && cp ./src/index.html ./out/"
     },
     "dependencies": {},
     "devDependencies": {
