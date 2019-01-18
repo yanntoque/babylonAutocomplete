@@ -27,9 +27,9 @@ cd lsp-sample
 
 ### Instructions to compile the [example from Babylon.js](https://playground.babylonjs.com/) written in coffeescript and see the output
 
-* Go to the babylon_sample folder then run the npm command : 
+* Go to the babylon-sample folder then run the npm command : 
 ```
-cd babylon_sample
+cd babylon-sample
 npm run compile 
 ```
 
