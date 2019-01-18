@@ -4,42 +4,34 @@ This project aims to create an autocomplete extension for Babylon.js in coffeesc
 
 To understand what is Language Server and why we use it in this project please refer to this link : https://code.visualstudio.com/api/language-extensions/language-server-extension-guide#why-language-server
 
-# LSP Sample 
+# 1) Instructions for `lsp-sample` 
  
-This is the folder that contains the code of the extension. 
+This folder contains the code to create an autocomplete extension (original [here](https://github.com/Microsoft/vscode-extension-samples/tree/master/lsp-sample)). 
 
-* Go to the lsp-sample folder :
-```
-cd lsp-sample 
-```
+* Go to the `lsp-sample` folder 
 * Run `npm install` in this folder. This installs all necessary npm modules in both the client and server folder
 * Open VS Code on this folder.
 * Press Ctrl+Shift+B to compile the client and server.
-* Switch to the Debug viewlet.
-* Select `Launch Client` from the drop down.
-* Run the launch config.
-* If you want to debug the server as well use the launch configuration `Attach to Server`
-* In the [Extension Development Host] instance of VSCode, open a document in 'plain text' language mode.
-  * Type `n` or `B` to see `new (` and `BABYLON.` completion.
-  * Enter text content such as `AAA aaa BBB`. The extension will emit diagnostics for all words in all-uppercase.
+* Switch to the Debug viewlet with Ctrl+Shift+D.
+* Select `Launch Client` from the drop down and run it.
+* You should have a new VSCode window opened called "[Extension Development Host]"
+* In the [Extension Development Host] instance of VSCode, open the `main.coffee` from the folder `babylon-sample/src`
+* Follow the instructions of the next section 
 
-# Babylon Sample
 
-### Instructions to compile the [example from Babylon.js](https://playground.babylonjs.com/) written in coffeescript and see the output
+# 2)  Instructions for `babylon-sample`
 
-* Go to the babylon-sample folder then run the npm command : 
+* Go to the `babylon-sample` folder then run the npm command : 
 ```
-cd babylon-sample
 npm run compile 
 ```
 
-* Check if an out/ folder has been created with this commmand :
+* Go to the  `babylon-sample/out/` folder and open the `index.html` in your browser 
 
-```
-ls | grep 'out'
-```
+* You can modify the code of `main.coffee` from the [Extension Development Host] instance of VSCode
+    * Type n or B to see new ( and BABYLON. completion.
 
-* Go to the out folder and open the index.html in your browser 
+* Save your modifications and refresh the page in your browser to see the compiled code 
 
 
 ## What is [Babylon.js](https://www.babylonjs.com/) ?
