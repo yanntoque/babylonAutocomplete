@@ -33,6 +33,34 @@ npm run compile
 
 * Save your modifications and refresh the page in your browser to see the compiled code 
 
+# Explanation on the Autocomplete 
+
+For the autocomplete purpose we need two different files from `lsp-sample\server\src\`:
+
+ * `label.ts` stores all the completion items. This very file will be called in the second one.
+
+ Structure example for the item **new(**. The user types `n` and our extension will suggest completion with `new(`, to confirm it he must press ENTER : 
+ 
+ ```
+import { CompletionItemKind } from 'vscode-languageserver';
+
+const labels = [
+    {
+        label: 'new (',
+        kind: CompletionItemKind.Text,
+        data: 1
+    }
+} 
+ ```
+
+ * the second one is the `server.ts` it imports all items from the previous file and go throught it and add additionnal information to the item (matched by id) such as detail and documentation :
+ ```
+ case 1:
+				(item.detail = 'new ('),
+					(item.documentation = 'Instanciates a BABYLON')
+				break;
+ ``` 
+
 
 ## What is [Babylon.js](https://www.babylonjs.com/) ?
 
