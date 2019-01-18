@@ -1,6 +1,6 @@
-# [ Master I | MIAGE ] Technology Monitoring : Babylon.js, CoffeeScript and VSCode Extension
+# [ Master I | MIAGE ] Technology Monitoring : Babylon.js, CoffeeScript and VS Code Extension
 
-This project aims to create an autocomplete extension for Babylon.js in coffeescript files thanks to the [Language Server Extension](https://code.visualstudio.com/api/language-extensions/language-server-extension-guide) provided by VSCode. 
+This project aims to create an autocomplete extension for Babylon.js in coffeescript files thanks to the [Language Server Extension](https://code.visualstudio.com/api/language-extensions/language-server-extension-guide) provided by VS Code. 
 
 To understand what is Language Server and why we use it in this project please refer to this link : https://code.visualstudio.com/api/language-extensions/language-server-extension-guide#why-language-server
 
@@ -14,8 +14,8 @@ This folder contains the code to create an autocomplete extension (original [her
 * Press Ctrl+Shift+B to compile the client and server.
 * Switch to the Debug viewlet with Ctrl+Shift+D.
 * Select `Launch Client` from the drop down and run it.
-* You should have a new VSCode window opened called "[Extension Development Host]"
-* In the [Extension Development Host] instance of VSCode, open the `main.coffee` from the folder `babylon-sample/src`
+* You should have a new VS Code window opened called "[Extension Development Host]"
+* In the [Extension Development Host] instance of VS Code, open the `main.coffee` from the folder `babylon-sample/src`
 * Follow the instructions of the next section 
 
 
@@ -28,7 +28,7 @@ npm run compile
 
 * Go to the  `babylon-sample/out/` folder and open the `index.html` in your browser 
 
-* You can modify the code of `main.coffee` from the [Extension Development Host] instance of VSCode
+* You can modify the code of `main.coffee` from the [Extension Development Host] instance of VS Code
     * Type n or B to see new ( and BABYLON. completion.
 
 * Save your modifications and refresh the page in your browser to see the compiled code 
@@ -38,7 +38,7 @@ npm run compile
 
 JavaScript API designed to render interactive 3D computer graphics and 2D graphics within any compatible web browser, without the use of any plug-ins.
 
-## What is [VSCode](https://code.visualstudio.com/) ?
+## What is [VS Code](https://code.visualstudio.com/) ?
 
 VS Code is a type of tool that combines the simplicity of a code editor with what developers need for their core edit-build-debug cycle. It provides comprehensive editing and debugging support, an extensibility model, and lightweight integration with existing tools.
 
