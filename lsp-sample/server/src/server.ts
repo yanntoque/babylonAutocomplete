@@ -383,10 +383,9 @@ connection.onCompletionResolve(
 					(item.documentation = 'Creates an custom extruded shape mesh. The custom extrusion is a parametric shape. It has no predefined shape. Its final shape will depend on the input parameters.')
 				break;
 
-			//
 			default:
 				(item.detail = 'Babylon (thx captain Obvious)'),
-					(item.documentation = 'There\'s no doc, search by yourself youg padawan')
+					(item.documentation = 'There\'s no doc, search by yourself young padawan')
 				break;
 		}
 		return item;
