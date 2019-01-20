@@ -207,24 +207,186 @@ connection.onCompletionResolve(
 					(item.documentation = 'Instantiates a Free Camera. This represents a free type of camera. It can be useful in First Person Shooter game for instance. Please consider using the new UniversalCamera instead as it adds more functionality like touch to this camera.')
 				break;
 			case 4:
-				(item.detail = 'new (BABYLON.Vector3)(x,y,z)'),
-					(item.documentation = 'Creates a new Vector3 object from the given x, y, z (floats) coordinates.')
-				break;
-			case 5:
 				(item.detail = 'new (BABYLON.HemisphericLight)(name, direction, scene)'),
 					(item.documentation = 'Creates a HemisphericLight object in the scene according to the passed direction (Vector3). The HemisphericLight simulates the ambient environment light, so the passed direction is the light reflection direction, not the incoming direction. The HemisphericLight can\'t cast shadows. Documentation : https://doc.babylonjs.com/babylon101/lights')
 				break;
-			case 6:
+			case 5:
 				(item.detail = 'new (BABYLON.object)'),
 					(item.documentation = 'Creates a object')
 				break;
-			case 7:
+			case 6:
 				(item.detail = 'new ('),
 					(item.documentation = 'Instanciates a BABYLON')
 				break;
+			case 7:
+				(item.detail = 'new (BABYLON.Vector2)(x,y)'),
+					(item.documentation = 'Creates a new Vector2 object from the given x, y (floats) coordinates.')
+				break;
+			case 8:
+				(item.detail = 'new (BABYLON.Vector3)(x,y,z)'),
+					(item.documentation = 'Creates a new Vector3 object from the given x, y, z (floats) coordinates.')
+				break;
+			case 9:
+				(item.detail = 'new (BABYLON.Vector4)(x,y,z,w)'),
+					(item.documentation = 'Creates a new Vector4 object from the given x, y, z, w (floats) coordinates.')
+				break;
+			case 10:
+				(item.detail = 'new Mesh(name: string, scene ?: Nullable < Scene >, parent ?: Nullable < Node >, source ?: Nullable < Mesh >, doNotCloneChildren ?: boolean, clonePhysicsImpostor ?: boolean)'),
+					(item.documentation = 'Class used to represent renderable models')
+				break;
+			case 11:
+				(item.detail = 'new GroundMesh()'),
+					(item.documentation = 'Mesh representing the ground')
+				break;
+			case 12:
+				(item.detail = 'new LinesMesh(name: string, scene?: Nullable<Scene>, parent?: Nullable<Node>, source?: LinesMesh, doNotCloneChildren?: boolean, useVertexColor?: boolean | undefined, useVertexAlpha?: boolean | undefined): LinesMesh'),
+					(item.documentation = 'Line mesh')
+				break;
+			case 13:
+				(item.detail = 'new Action(triggerOptions: any, condition?: Condition): Action'),
+					(item.documentation = 'The action to be carried out following a trigger')
+				break;
+			case 14:
+				(item.detail = 'new ActionManager(scene: Scene): ActionManager'),
+					(item.documentation = 'Action Manager manages all events to be triggered on a given mesh or the global scene. A single scene can have many Action Managers to handle predefined actions on specific meshes.')
+				break;
+			case 15:
+				(item.detail = 'new ActionEvent(source: any, pointerX: number, pointerY: number, meshUnderPointer: Nullable<AbstractMesh>, sourceEvent?: any, additionalData?: any): ActionEvent'),
+					(item.documentation = 'ActionEvent is the event being sent when an action is triggered.')
+				break;
+			case 16:
+				(item.detail = 'new Angle(radians: number): Angle'),
+					(item.documentation = 'Defines angle representation')
+				break;
+			case 17:
+				(item.detail = 'new Animation(name: string, targetProperty: string, framePerSecond: number, dataType: number, loopMode?: number | undefined, enableBlending?: boolean | undefined): Animation'),
+					(item.documentation = 'Class used to store any kind of animation')
+				break;
+			case 18:
+				(item.detail = 'new AnimationEvent(frame: number, action: function, onlyOnce?: boolean | undefined): AnimationEvent'),
+					(item.documentation = 'Composed of a frame, and an action function')
+				break;
+			case 19:
+				(item.detail = 'new AnimationGroup(name: string, scene?: Nullable<Scene>): AnimationGroup'),
+					(item.documentation = 'Use this class to create coordinated animations on multiple targets')
+				break;
+			case 20:
+				(item.detail = 'new AnimationPropertiesOverride()'),
+					(item.documentation = 'Class used to override all child animations of a given target')
+				break;
+			case 21:
+				(item.detail = 'new AnimationRange(name: string, from: number, to: number): AnimationRange'),
+					(item.documentation = 'Represents the range of an animation')
+				break;
+			case 22:
+				(item.detail = 'new Color3(r?: number, g?: number, b?: number): Color3'),
+					(item.documentation = 'Class used to hold a RBG color')
+				break;
+			case 23:
+				(item.detail = 'new Color4(r?: number, g?: number, b?: number, a?: number) : Color4)'),
+					(item.documentation = 'Class used to hold a RBGA color')
+				break;
+			case 24:
+				(item.detail = 'CreateBox(name: string, options: object, scene?: Nullable<Scene>): Mesh'),
+					(item.documentation = 'Creates a box mesh')
+				break;
+			case 25:
+				(item.detail = 'CreateCylinder(name: string, options: object, scene: any): Mesh'),
+					(item.documentation = 'Creates a cylinder or a cone mesh')
+				break;
+			case 26:
+				(item.detail = 'CreateDashedLines(name: string, options: object, scene?: Nullable<Scene>): LinesMesh'),
+					(item.documentation = 'Creates a dashed line mesh')
+				break;
+			case 27:
+				(item.detail = 'CreateDecal(name: string, sourceMesh: AbstractMesh, options: object): Mesh'),
+					(item.documentation = 'Creates a decal mesh. A decal is a mesh usually applied as a model onto the surface of another mesh. So don\'t forget the parameter sourceMesh depicting the decal')
+				break;
+			case 28:
+				(item.detail = 'CreateDisc(name: string, options: object, scene?: Nullable<Scene>): Mesh'),
+					(item.documentation = 'Creates a plane polygonal mesh. By default, this is a disc')
+				break;
+			case 29:
+				(item.detail = 'new MeshBuilder()'),
+					(item.documentation = 'Class containing static functions to help procedurally build meshes')
+				break;
+			case 30:
+				(item.detail = 'CreateGround(name: string, options: object, scene: any): Mesh'),
+					(item.documentation = 'Creates a ground mesh')
+				break;
+			case 31:
+				(item.detail = 'CreateGroundFromHeightMap(name: string, url: string, options: object, scene: Scene): GroundMesh'),
+					(item.documentation = 'Creates a ground mesh from a height map')
+				break;
+			case 32:
+				(item.detail = 'CreateIcoSphere(name: string, options: object, scene: Scene): Mesh'),
+					(item.documentation = 'Creates a sphere based upon an icosahedron with 20 triangular faces which can be subdivided')
+				break;
+			case 33:
+				(item.detail = 'CreateLathe(name: string, options: object, scene: Scene): Mesh'),
+					(item.documentation = 'Creates lathe mesh. The lathe is a shape with a symetry axis : a 2D model shape is rotated around this axis to design the lathe')
+				break;
+			case 34:
+				(item.detail = 'CreateLineSystem(name: string, options: object, scene: Nullable<Scene>): LinesMesh'),
+					(item.documentation = 'Creates a line system mesh. A line system is a pool of many lines gathered in a single mesh')
+				break;
+			case 35:
+				(item.detail = 'CreateLines(name: string, options: object, scene?: Nullable<Scene>): LinesMesh'),
+					(item.documentation = 'Creates a line mesh A line mesh is considered as a parametric shape since it has no predefined original shape. Its shape is determined by the passed array of points as an input parameter')
+				break;
+			case 36:
+				(item.detail = 'CreatePlane(name: string, options: object, scene: Scene): Mesh'),
+					(item.documentation = 'Creates a plane mesh')
+				break;
+			case 37:
+				(item.detail = 'CreatePolygon(name: string, options: object, scene: Scene): Mesh'),
+					(item.documentation = 'Creates a polygon mesh The polygon\'s shape will depend on the input parameters and is constructed parallel to a ground mesh')
+				break;
+			case 38:
+				(item.detail = 'CreatePolyhedron(name: string, options: object, scene: Scene): Mesh'),
+					(item.documentation = 'Creates a polyhedron mesh')
+				break;
+			case 39:
+				(item.detail = 'CreateRibbon(name: string, options: object, scene?: Nullable<Scene>): Mesh'),
+					(item.documentation = 'Creates a ribbon mesh. The ribbon is a parametric shape. It has no predefined shape. Its final shape will depend on the input parameters')
+				break;
+			case 40:
+				(item.detail = 'CreateSphere(name: string, options: object, scene: any): Meshl'),
+					(item.documentation = 'Creates a sphere mesh')
+				break;
+			case 41:
+				(item.detail = 'CreateTiledGround(name: string, options: object, scene: Scene): Mesh'),
+					(item.documentation = 'Creates a tiled ground mesh')
+				break;
+			case 42:
+				(item.detail = 'CreateTorus(name: string, options: object, scene: any): Mesh'),
+					(item.documentation = 'Creates a torus mesh')
+				break;
+			case 43:
+				(item.detail = 'CreateTorusKnot(name: string, options: object, scene: any): Mesh'),
+					(item.documentation = 'Creates a torus knot mesh')
+				break;
+			case 44:
+				(item.detail = 'CreateTube(name: string, options: object, scene: Scene): Mesh'),
+					(item.documentation = 'Creates a tube mesh. The tube is a parametric shape. It has no predefined shape. Its final shape will depend on the input parameters')
+				break;
+			case 45:
+				(item.detail = 'ExtrudePolygon(name: string, options: object, scene: Scene): Mesh'),
+					(item.documentation = 'Creates an extruded polygon mesh, with depth in the Y direction.')
+				break;
+			case 46:
+				(item.detail = 'ExtrudeShape(name: string, options: object, scene?: Nullable<Scene>): Mesh'),
+					(item.documentation = 'Creates an extruded shape mesh. The extrusion is a parametric shape. It has no predefined shape. Its final shape will depend on the input parameters.')
+				break;
+			case 47:
+				(item.detail = 'ExtrudeShapeCustom(name: string, options: object, scene: Scene): Mesh'),
+					(item.documentation = 'Creates an custom extruded shape mesh. The custom extrusion is a parametric shape. It has no predefined shape. Its final shape will depend on the input parameters.')
+				break;
+
+			//
 			default:
-				(item.detail = 'Babylon'),
-					(item.documentation = 'Documentation not provided')
+				(item.detail = 'Babylon (thx captain Obvious)'),
+					(item.documentation = 'There\'s no doc, search by yourself youg padawan')
 				break;
 		}
 		return item;
