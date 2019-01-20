@@ -2,7 +2,7 @@
     "name": "babylonAutocomplete",
     "version": "0.0.0",
     "scripts": {
-        "compile": "coffee --watch --output ./out ./src && cp ./src/index.html ./out/"
+        "compile": "cp ./src/index.html ./out/ && coffee --watch --output ./out ./src"
     },
     "dependencies": {},
     "devDependencies": {
