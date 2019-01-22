@@ -382,7 +382,15 @@ connection.onCompletionResolve(
 				(item.detail = 'ExtrudeShapeCustom(name: string, options: object, scene: Scene): Mesh'),
 					(item.documentation = 'Creates an custom extruded shape mesh. The custom extrusion is a parametric shape. It has no predefined shape. Its final shape will depend on the input parameters.')
 				break;
-
+			case 48:
+				(item.detail = 'var'),
+					(item.documentation = 'Creates a simple variable')
+				break;
+			case 49:
+				(item.detail = 'BABYLON.GUI'),
+					(item.documentation = 'Access GUI properties')
+				break;
+					
 			default:
 				(item.detail = 'Babylon (thx captain Obvious)'),
 					(item.documentation = 'There\'s no doc, search by yourself young padawan')

@@ -217,6 +217,14 @@ const meshShapes = [{
     label: 'ExtrudeShapeCustom',
     kind: CompletionItemKind.Text,
     data: 47    
+},{
+    label: 'var',
+    kind: CompletionItemKind.Text,
+    data: 48
+},{
+    label: 'BABYLON.GUI',
+    kind: CompletionItemKind.Text,
+    data: 49
 }].forEach(shape => {
     labels.push(shape);
 });
