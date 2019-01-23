@@ -3,51 +3,56 @@ import { CompletionItemKind } from 'vscode-languageserver';
 const labels = [
     {
         label: 'Engine)(canvasOrContext, antialias, options, adaptToDeviceRatio)',
-        kind: CompletionItemKind.Text,
+        kind: CompletionItemKind.Constructor,
         data: 1
     },
     {
         label: 'Scene)(engine, options)',
-        kind: CompletionItemKind.Text,
+        kind: CompletionItemKind.Constructor,
         data: 2
     },
     {
         label: 'FreeCamera)(name, position, scene, setActiveOnSceneIfNoneActive)',
-        kind: CompletionItemKind.Text,
+        kind: CompletionItemKind.Constructor,
         data: 3
     },
     {
         label: 'HemisphericLight)(name, direction, scene)',
-        kind: CompletionItemKind.Text,
+        kind: CompletionItemKind.Constructor,
         data: 4
     },
     {
         label: 'BABYLON.',
-        kind: CompletionItemKind.Text,
+        kind: CompletionItemKind.Class,
         data: 5
     },
     {
         label: 'new (',
         kind: CompletionItemKind.Text,
         data: 6
-    },{
+    }, {
         label: 'Angle',
-        kind: CompletionItemKind.Text,
+        kind: CompletionItemKind.Class,
         data: 16
+    },
+    {
+        label: 'ShaderMaterial)()',
+        kind: CompletionItemKind.Constructor,
+        data: 48
     }
 ];
 
 const vectors = [{
     label: 'Vector2)(x,y)',
-    kind: CompletionItemKind.Text,
+    kind: CompletionItemKind.Constructor,
     data: 7
 }, {
     label: 'Vector3)(x,y,z)',
-    kind: CompletionItemKind.Text,
+    kind: CompletionItemKind.Constructor,
     data: 8
 }, {
     label: 'Vector4)(x,y,z,w)',
-    kind: CompletionItemKind.Text,
+    kind: CompletionItemKind.Constructor,
     data: 9
 },].forEach(vector => {
     labels.push(vector);
@@ -55,19 +60,19 @@ const vectors = [{
 
 const mesh = [{
     label: 'Mesh',
-    kind: CompletionItemKind.Text,
+    kind: CompletionItemKind.Class,
     data: 10
 }, {
     label: 'GroundMesh',
-    kind: CompletionItemKind.Text,
+    kind: CompletionItemKind.Class,
     data: 11
 }, {
     label: 'LinesMesh',
-    kind: CompletionItemKind.Text,
+    kind: CompletionItemKind.Class,
     data: 12
-},{
+}, {
     label: 'MeshBuilder',
-    kind: CompletionItemKind.Text,
+    kind: CompletionItemKind.Class,
     data: 29
 }].forEach(mesh => {
     labels.push(mesh);
@@ -75,52 +80,52 @@ const mesh = [{
 
 const actions = [{
     label: 'Action',
-    kind: CompletionItemKind.Text,
+    kind: CompletionItemKind.Class,
     data: 13
-},{
+}, {
     label: 'ActionManager',
-    kind: CompletionItemKind.Text,
-    data: 14    
-},{
+    kind: CompletionItemKind.Class,
+    data: 14
+}, {
     label: 'ActionEvent',
-    kind: CompletionItemKind.Text,
-    data: 15    
+    kind: CompletionItemKind.Class,
+    data: 15
 }].forEach(action => {
     labels.push(action);
 });
 
 const animations = [{
     label: 'Animation',
-    kind: CompletionItemKind.Text,
+    kind: CompletionItemKind.Class,
     data: 17
-},{
+}, {
     label: 'AnimationEvent',
-    kind: CompletionItemKind.Text,
-    data: 18    
-},{
+    kind: CompletionItemKind.Class,
+    data: 18
+}, {
     label: 'AnimationGroup',
-    kind: CompletionItemKind.Text,
-    data: 19    
-},{
+    kind: CompletionItemKind.Class,
+    data: 19
+}, {
     label: 'AnimationPropertiesOverride',
-    kind: CompletionItemKind.Text,
-    data: 20    
-},{
+    kind: CompletionItemKind.Class,
+    data: 20
+}, {
     label: 'AnimationRange',
-    kind: CompletionItemKind.Text,
-    data: 21    
+    kind: CompletionItemKind.Class,
+    data: 21
 }].forEach(animation => {
     labels.push(animation);
 });
 
 const colors = [{
     label: 'Color3',
-    kind: CompletionItemKind.Text,
+    kind: CompletionItemKind.Class,
     data: 22
-},{
+}, {
     label: 'Color4',
-    kind: CompletionItemKind.Text,
-    data: 23    
+    kind: CompletionItemKind.Class,
+    data: 23
 }].forEach(color => {
     labels.push(color);
 });
@@ -129,96 +134,149 @@ const meshShapes = [{
     label: 'CreateBox',
     kind: CompletionItemKind.Text,
     data: 24
-},{
+}, {
     label: 'CreateCylinder',
     kind: CompletionItemKind.Text,
-    data: 25    
-},{
+    data: 25
+}, {
     label: 'CreateDashedLines',
     kind: CompletionItemKind.Text,
     data: 26
-},{
+}, {
     label: 'CreateDecal',
     kind: CompletionItemKind.Text,
-    data: 27    
-},{
+    data: 27
+}, {
     label: 'CreateDisc',
     kind: CompletionItemKind.Text,
-    data: 28    
-},{
+    data: 28
+}, {
     label: 'CreateGround',
     kind: CompletionItemKind.Text,
     data: 30
-},{
+}, {
     label: 'CreateGroundFromHeightMap',
     kind: CompletionItemKind.Text,
-    data: 31    
-},{
+    data: 31
+}, {
     label: 'CreateIcoSphere',
     kind: CompletionItemKind.Text,
     data: 32
-},{
+}, {
     label: 'CreateLathe',
     kind: CompletionItemKind.Text,
-    data: 33    
-},{
+    data: 33
+}, {
     label: 'CreateLineSystem',
     kind: CompletionItemKind.Text,
-    data: 34    
-},{
+    data: 34
+}, {
     label: 'CreateLines',
     kind: CompletionItemKind.Text,
     data: 35
-},{
+}, {
     label: 'CreatePlane',
     kind: CompletionItemKind.Text,
-    data: 36    
-},{
+    data: 36
+}, {
     label: 'CreatePolygon',
     kind: CompletionItemKind.Text,
     data: 37
-},{
+}, {
     label: 'CreatePolyhedron',
     kind: CompletionItemKind.Text,
-    data: 38    
-},{
+    data: 38
+}, {
     label: 'CreateRibbon',
     kind: CompletionItemKind.Text,
-    data: 39    
-},{
+    data: 39
+}, {
     label: 'CreateSphere',
     kind: CompletionItemKind.Text,
     data: 40
-},{
+}, {
     label: 'CreateTiledGround',
     kind: CompletionItemKind.Text,
-    data: 41    
-},{
+    data: 41
+}, {
     label: 'CreateTorus',
     kind: CompletionItemKind.Text,
     data: 42
-},{
+}, {
     label: 'CreateTorusKnot',
     kind: CompletionItemKind.Text,
-    data: 43    
-},{
+    data: 43
+}, {
     label: 'CreateTube',
     kind: CompletionItemKind.Text,
-    data: 44    
-},{
+    data: 44
+}, {
     label: 'ExtrudePolygon',
     kind: CompletionItemKind.Text,
-    data: 45    
-},{
+    data: 45
+}, {
     label: 'ExtrudeShape',
     kind: CompletionItemKind.Text,
-    data: 46    
-},{
+    data: 46
+}, {
     label: 'ExtrudeShapeCustom',
     kind: CompletionItemKind.Text,
-    data: 47    
+    data: 47
 }].forEach(shape => {
     labels.push(shape);
+});
+
+
+const ShaderMaterialMethods = [{
+    label: 'bind()',
+    kind: CompletionItemKind.Text,
+    data: 49
+}, {
+    label: 'bindForSubMesh()',
+    kind: CompletionItemKind.Text,
+    data: 50
+}, {
+    label: 'bindOnlyWorldMatrix()',
+    kind: CompletionItemKind.Text,
+    data: 51
+}, {
+    label: 'bindSceneUniformBuffer()',
+    kind: CompletionItemKind.Text,
+    data: 52
+}, {
+    label: 'bindView()',
+    kind: CompletionItemKind.Text,
+    data: 53
+}, {
+    label: 'bindViewProjection()',
+    kind: CompletionItemKind.Text,
+    data: 54
+}, {
+    label: 'clone()',
+    kind: CompletionItemKind.Text,
+    data: 55
+}, {
+    label: 'dispose()',
+    kind: CompletionItemKind.Text,
+    data: 56
+}, {
+    label: 'forceCompilation()',
+    kind: CompletionItemKind.Text,
+    data: 57
+}, {
+    label: 'forceCompilationAsync()',
+    kind: CompletionItemKind.Text,
+    data: 58
+}, {
+    label: 'freeze()',
+    kind: CompletionItemKind.Text,
+    data: 59
+}, {
+    label: 'getActiveTextures()',
+    kind: CompletionItemKind.Text,
+    data: 60
+}].forEach(method => {
+    labels.push(method);
 });
 
 export default labels;

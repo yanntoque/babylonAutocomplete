@@ -382,6 +382,57 @@ connection.onCompletionResolve(
 				(item.detail = 'ExtrudeShapeCustom(name: string, options: object, scene: Scene): Mesh'),
 					(item.documentation = 'Creates an custom extruded shape mesh. The custom extrusion is a parametric shape. It has no predefined shape. Its final shape will depend on the input parameters.')
 				break;
+			case 48:
+				(item.detail = 'new (BABYLON.ShaderMaterial)(name, scene, route, options)'),
+					(item.documentation = 'Instantiate a new shader material. The ShaderMaterial object has the necessary methods to pass data from your scene to the Vertex and Fragment Shaders and returns a material that can be applied to any mesh. This returned material effects how the mesh will look based on the code in the shaders.')
+				break;
+			case 49:
+				(item.detail = 'bind(world: Matrix, mesh?: Mesh): void'),
+					(item.documentation = 'Binds the material to the mesh')
+				break;
+			case 50:
+				(item.detail = 'bindForSubMesh(world: Matrix, mesh: Mesh, subMesh: SubMesh): void'),
+					(item.documentation = 'Binds the submesh to the material')
+				break;
+			case 51:
+				(item.detail = 'bindOnlyWorldMatrix(world: Matrix): void'),
+					(item.documentation = 'Binds the world matrix to the material')
+				break;
+			case 52:
+				(item.detail = 'bindSceneUniformBuffer(effect: Effect, sceneUbo: UniformBuffer): void'),
+					(item.documentation = 'Binds the scene\'s uniform buffer to the effect.')
+				break;
+			case 53:
+				(item.detail = 'bindView(effect: Effect): void'),
+					(item.documentation = 'Binds the view matrix to the effect')
+			case 54:
+				(item.detail = 'bindViewProjection(effect: Effect): void'),
+					(item.documentation = 'Binds the view projection matrix to the effect')
+				break;
+			case 55:
+				(item.detail = 'clone(name: string): ShaderMaterial'),
+					(item.documentation = 'Makes a duplicate of the material, and gives it a new name')
+				break;
+			case 56:
+				(item.detail = 'dispose(forceDisposeEffect?: boolean, forceDisposeTextures?: boolean, notBoundToMesh?: boolean): void'),
+					(item.documentation = 'Disposes the material')
+				break;
+			case 57:
+				(item.detail = 'forceCompilation(mesh: AbstractMesh, onCompiled?: function, options?: Partial<object>): void'),
+					(item.documentation = 'Force shader compilation')
+				break;
+			case 58:
+				(item.detail = 'forceCompilationAsync(mesh: AbstractMesh, options?: Partial<object>): Promise<void>'),
+					(item.documentation = 'Force shader compilation')
+				break;
+			case 59:
+				(item.detail = 'freeze(): void'),
+					(item.documentation = 'Locks updates for the material')
+				break;
+			case 60:
+				(item.detail = 'getActiveTextures(): BaseTexture[]'),
+					(item.documentation = 'Gets the active textures from the material')
+				break;
 
 			default:
 				(item.detail = 'Babylon (thx captain Obvious)'),
