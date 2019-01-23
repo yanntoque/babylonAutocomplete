@@ -275,8 +275,73 @@ const ShaderMaterialMethods = [{
     label: 'getActiveTextures()',
     kind: CompletionItemKind.Text,
     data: 60
+},{
+    label: 'createScene()',
+    kind: CompletionItemKind.Text,
+    data: 61
+},{
+    label: 'runRenderLoop',
+    kind: CompletionItemKind.Text,
+    data: 62
+},{
+    label: 'render()',
+    kind: CompletionItemKind.Text,
+    data: 63
 }].forEach(method => {
     labels.push(method);
 });
+
+const scene = [{
+    label: 'ArcRotateCamera',
+    kind: CompletionItemKind.Text,
+    data: 64
+},{
+    label: 'attachControl(canvas, false)',
+    kind: CompletionItemKind.Text,
+    data: 65
+},{
+    label: 'intensity',
+    kind: CompletionItemKind.Text,
+    data: 66
+},{
+    label: 'diffuse',
+    kind: CompletionItemKind.Text,
+    data: 67
+},{
+    label: 'PointLight',
+    kind: CompletionItemKind.Class,
+    data: 68
+},{
+    label: 'StandardMaterial',
+    kind: CompletionItemKind.Class,
+    data: 69
+},{
+    label: 'emissiveTexture',
+    kind: CompletionItemKind.Class,
+    data: 70
+},{
+    label: 'Texture',
+    kind: CompletionItemKind.Class,
+    data: 71
+},{
+    label: 'material',
+    kind: CompletionItemKind.Class,
+    data: 72
+},{
+    label: 'position',
+    kind: CompletionItemKind.Class,
+    data: 73
+},{
+    label: 'resize()',
+    kind: CompletionItemKind.Class,
+    data: 74
+},{
+    label: 'addEventListener',
+    kind: CompletionItemKind.Class,
+    data: 75
+}].forEach(scene => {
+    labels.push(scene);
+});
+
 
 export default labels;

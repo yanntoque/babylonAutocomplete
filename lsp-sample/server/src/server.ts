@@ -433,7 +433,66 @@ connection.onCompletionResolve(
 				(item.detail = 'getActiveTextures(): BaseTexture[]'),
 					(item.documentation = 'Gets the active textures from the material')
 				break;
-
+			case 61:
+				(item.detail = 'createScene: Scene'),
+					(item.documentation = 'Create a scene')
+				break;
+			case 62:
+				(item.detail = 'runRenderLoop(): void'),
+					(item.documentation = 'Call the scene')
+				break;
+			case 63:
+				(item.detail = 'render(): void()'),
+					(item.documentation = 'Return the scene')
+				break;
+			case 64:
+				(item.detail = 'new ArcRotateCamera(name: string, alpha: number, beta: number, radius: number, target: Vector3, scene: Scene, setActiveOnSceneIfNoneActive?: boolean): ArcRotateCamera'),
+					(item.documentation = 'This represents an orbital type of camera.')
+				break;
+			case 65:
+				(item.detail = 'attachControl(element: HTMLElement, noPreventDefault?: boolean, useCtrlForPanning?: boolean, panningMouseButton?: number): void'),
+					(item.documentation = 'Attached controls to the current camera.')
+				break;
+			case 66:
+				(item.detail = 'intensity'),
+					(item.documentation = 'Intensity of a light')
+				break;
+			case 67:
+				(item.detail = 'diffuse'),
+					(item.documentation = 'Diffusion of a light')
+				break;
+			case 68:
+				(item.detail = 'new PointLight(name: string, target: Vector3, scene: Scene, setActiveOnSceneIfNoneActive?: boolean)) : PointLight'),
+					(item.documentation = 'This represents a point light')
+				break;
+			case 69:
+				(item.detail = 'new StandardMaterial(name: string, scene: Scene): StandardMaterial'),
+					(item.documentation = 'This is the default material used in Babylon. It is the best trade off between quality and performances.')
+				break;
+			case 70:
+				(item.detail = 'emissiveTexture'),
+					(item.documentation = 'An emissive texture')
+				break;
+			case 71:
+				(item.detail = 'new Texture(url: Nullable<string>, scene: Nullable<Scene>, noMipmap?: boolean, invertY?: boolean, samplingMode?: number, onLoad?: Nullable<function>, onError?: Nullable<function>, buffer?: Nullable<string | ArrayBuffer | HTMLImageElement | Blob>, deleteBuffer?: boolean, format?: number): Texture'),
+					(item.documentation = 'Instantiates a new texture. This represents a texture in babylon. It can be easily loaded from a network, base64 or html input.')
+				break;
+			case 72:
+				(item.detail = 'material'),
+					(item.documentation = 'A material')
+				break;
+			case 73:
+				(item.detail = 'position'),
+					(item.documentation = 'Position of the mesh')
+				break;
+			case 74:
+				(item.detail = 'resize() : void'),
+					(item.documentation = 'Resize a mesh')
+				break;
+			case 75:
+				(item.detail = 'addEventListener'),
+					(item.documentation = 'Add a listener')
+				break;
 			default:
 				(item.detail = 'Babylon (thx captain Obvious)'),
 					(item.documentation = 'There\'s no doc, search by yourself young padawan')
