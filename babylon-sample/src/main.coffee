@@ -32,7 +32,7 @@ window.addEventListener 'DOMContentLoaded', ->
     earthMaterial = new (BABYLON.StandardMaterial)("earthMaterial", scene)
     earthMaterial.emissiveTexture = new (BABYLON.Texture)("https://i.imgur.com/kjxyOBb.png", scene)
     earth.material = earthMaterial
-       
+    
     scene
 
   # call the createScene function
